@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-header {
+  /* background-image: url("../src/assets/HeaderBg.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+}
+/* .about-header {
+  background-image: url("../src/assets/AboutUsHeaderBg.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+} */
+
+@property --num-teens {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-years {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-former {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes counter {
+  from {
+    --num-teens: 0;
+    --num-years: 0;
+    --num-former: 0;
+  }
+  to {
+    --num-teens: 100;
+    --num-years: 2;
+    --num-former: 20;
+  }
+}
+
+NavLink {
+  color: #fff;
+  font-size: 20px;
+  margin: 0px 30px 0px 30px;
+  text-decoration: none;
+  position: relative;
+
+  &:after {
+    bottom: -4px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    background: #fff;
+    opacity: 0.6;
+    transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    opacity: 0.9;
+  }
+}
+.active {
+  background-color: #003566;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.nav-item {
+  @apply relative text-blue-500 transition-all duration-300 ease-in-out;
+}
+.nav-item::after {
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 scale-x-0 origin-left transition-transform duration-300 ease-out;
+  content: "";
+}
+.nav-item:hover::after {
+  @apply scale-x-100;
+}
