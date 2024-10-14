@@ -179,7 +179,11 @@ const Layout = () => {
             >
               Contact Us
             </NavLink>
-            <Link to="donate" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              to="donate"
+              onClick={() => setIsMenuOpen(false)}
+              className="hover:bg-[#da7]"
+            >
               <Donate />
             </Link>
           </div>

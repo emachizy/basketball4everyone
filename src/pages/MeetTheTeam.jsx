@@ -38,7 +38,7 @@ const MeetTheTeam = () => {
           </h1>
         </div>
       </header>
-      <main>
+      <main className="w-4/5 mx-auto">
         <section
           className="md:flex justify-between items-center container mx-auto w-full gap-10 my-20 rounded-lg shadow-md overflow-hidden p-4"
           data-aos="fade-up"
@@ -48,7 +48,7 @@ const MeetTheTeam = () => {
             <figcaption className="text-gray-500 pt-2 font-bold">
               Onyeka Obiozo
             </figcaption>
-            <figcaption className="text-gray-500">Founder / CEO</figcaption>
+            <figcaption className="text-gray-500">Founder</figcaption>
           </figure>
           <p className="md:pt-0 pt-5 text-gray-500">
             As a young lad growing up in the bustling city of Lagos, I used to
@@ -73,13 +73,13 @@ const MeetTheTeam = () => {
           </h1>
           <div className="md:grid grid-cols-3 container mx-auto w-full gap-10">
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={pascal}
                 alt="Pascal Epere image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
                 Epere Paschal
@@ -89,13 +89,13 @@ const MeetTheTeam = () => {
               </figcaption>
             </figure>
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={ajayi}
                 alt="Ajayi Samuel image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
                 Samuel Ajayi
@@ -105,29 +105,29 @@ const MeetTheTeam = () => {
               </figcaption>
             </figure>
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={yetunde}
                 alt="Yetunde image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
-                Yetunde Ogunyemi
+                Yetunde Martins
               </figcaption>
               <figcaption className="text-gray-500">
                 HR & Admin Manager
               </figcaption>
             </figure>
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={samson}
                 alt="Emmanuel Samson image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
                 Emmanuel Samson
@@ -137,13 +137,13 @@ const MeetTheTeam = () => {
               </figcaption>
             </figure>
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={ayomide}
                 alt="Ayomide Eleboda image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
                 Ayomide Eleboda
@@ -153,13 +153,13 @@ const MeetTheTeam = () => {
               </figcaption>
             </figure>
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={richard}
                 alt="Richard Obiozo image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
                 Richard Obiozo
@@ -167,13 +167,13 @@ const MeetTheTeam = () => {
               <figcaption className="text-gray-500">Finance Officer</figcaption>
             </figure>
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={emmanuel}
                 alt="Emmanuel Nwankwo image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
                 Emmanuel Nwankwo
@@ -183,13 +183,13 @@ const MeetTheTeam = () => {
               </figcaption>
             </figure>
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={daniel}
                 alt="Daniel Arowojobe image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
                 Daniel Arowojobe
@@ -199,13 +199,13 @@ const MeetTheTeam = () => {
               </figcaption>
             </figure>
             <figure
-              className="bg-white rounded-lg shadow-md overflow-hidden"
+              className="bg-white shadow-lg rounded-lg p-6 text-center"
               data-aos="fade-up"
             >
               <img
                 src={riskat}
                 alt="Riskat Ajisegiri image"
-                className="object-cover select-none w-full h-auto bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
               />
               <figcaption className="text-gray-500 pt-2 font-bold">
                 Riskat Ajisegiri

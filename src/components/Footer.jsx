@@ -12,6 +12,7 @@ import { MdEmail } from "react-icons/md";
 import AOS from "aos";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Footer = () => {
       duration: 1200,
     });
   });
+
   return (
     <>
       {/* Footer section */}
@@ -35,10 +37,12 @@ const Footer = () => {
               </p>
               {/* socials */}
               <div className="flex items-center gap-5" data-aos="fade-up">
-                <FaFacebookSquare className="text-[#DA7600]" />
-                <FaInstagram className="text-[#DA7600]" />
-                <FaXTwitter className="text-[#DA7600]" />
-                <FaYoutube className="text-[#DA7600]" />
+                <FaFacebookSquare className="text-[#DA7600] cursor-pointer hover:text-white w-12" />
+
+                <FaInstagram className="text-[#DA7600] cursor-pointer hover:text-white w-12" />
+
+                <FaXTwitter className="text-[#DA7600] cursor-pointer hover:text-white w-12" />
+                <FaYoutube className="text-[#DA7600] cursor-pointer hover:text-white w-12" />
               </div>
             </div>
             <div
@@ -53,45 +57,45 @@ const Footer = () => {
               </h1>
               <ul className="flex flex-col gap-y-5" data-aos="fade-up">
                 <li>
-                  <a href="/" className="text-[#DA7600]" data-aos="fade-up">
+                  <Link to="/" className="text-[#DA7600]" data-aos="fade-up">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/about"
+                  <Link
+                    to="/about"
                     className="text-[#DA7600]"
                     data-aos="fade-up"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/getInvolved"
+                  <Link
+                    to="/getInvolved"
                     className="text-[#DA7600]"
                     data-aos="fade-up"
                   >
                     Get Involved
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contactUs"
                     className="text-[#DA7600]"
                     data-aos="fade-up"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/Donate"
+                  <Link
+                    to="/Donate"
                     className="text-[#DA7600]"
                     data-aos="fade-up"
                   >
                     Donate
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

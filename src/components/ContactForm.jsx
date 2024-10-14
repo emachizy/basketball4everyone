@@ -10,6 +10,7 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [show, setShow] = useState(false);
 
   const handleChange = (event) => {
     setFormData({
@@ -37,6 +38,12 @@ const ContactForm = () => {
         setIsSubmitting(false);
       }, 1000);
     }
+    setTimeout(() => {
+      setShow(true);
+    }, 2000);
+    setTimeout(() => {
+      setShow(false);
+    }, 5000);
   };
 
   const validateForm = (data) => {
@@ -134,6 +141,11 @@ const ContactForm = () => {
             {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </div>
+        {show && (
+          <p className="text-sm text-green-400">
+            Your message has been sent successfully!
+          </p>
+        )}
       </form>
     </>
   );

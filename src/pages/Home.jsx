@@ -1,5 +1,5 @@
 // import React from "react";
-
+import { Link } from "react-router-dom";
 import Donate from "../components/Donate";
 import Img from "../assets/Img/Img.png";
 // import Logo from "../assets/Logo.png";
@@ -24,7 +24,7 @@ export const Home = () => {
         {/* Hero section */}
         <section>
           <div
-            className="bg-gradient-to-tr from-gray-500 to-gray-950 h-screen md:h-72 bg-cover bg-center w-full relative"
+            className="bg-gradient-to-tr from-gray-500 to-gray-950 h-screen bg-cover bg-center w-full relative"
             data-aos="fade-up"
           >
             <img
@@ -33,26 +33,33 @@ export const Home = () => {
               className="w-full h-full object-cover absolute mix-blend-overlay"
             />
             <div
-              className="container mx-auto text-white text-center pt-8"
+              className="container mx-auto text-white text-center pt-8 md:px-0 px-4"
               data-aos="fade-up"
             >
-              <h1 className="md:text-4xl text-2xl font-bold pt-24 md:py-5 md:px-16">
+              <h1
+                className="md:text-6xl text-2xl font-bold pt-24 md:py-5 md:pt-32 md:px-2"
+                data-aos="flip-left"
+              >
                 Help Give Neglected Teens in Africa a Brighter Future Through
                 Basketball
               </h1>
-              <p className="text-white md:text-lg text-xl md:py-0 py-10 md:px-28">
+              <p
+                className="text-white md:text-lg text-xl md:py-0 py-10 md:px-20"
+                data-aos="flip-left"
+              >
                 At Basketball4Everyone Initiative, we are empowering the youths
                 in the streets with safe spaces, education, and skills they need
                 to thrive through the transformable power of basketball. Join
                 the movement.
               </p>
             </div>
-            <div
-              className="mx-0 flex justify-center items-center z-10 py-5 md:py-2 absolute text-center left-[35%] md:left-[45%]"
+            <Link
+              to="/donate"
+              className="mx-0 flex justify-center items-center z-10 py-5 md:py-10 absolute text-center left-[35%] md:left-[45%]"
               data-aos="fade-up"
             >
-              <Donate to="/donate" />
-            </div>
+              <Donate />
+            </Link>
           </div>
         </section>
       </header>
@@ -145,7 +152,9 @@ export const Home = () => {
               className="text-center shadow-md rounded-md p-2"
               data-aos="fade-up"
             >
-              <h1 className="text-2xl font-bold pb-4">Basketball Coaching</h1>
+              <h1 className="text-2xl font-bold pb-4" data-aos="flip-left">
+                Basketball Coaching
+              </h1>
               <p>
                 We reach out to underprivileged and street teenagers without
                 access to sports facilities and give them the opportunity to
@@ -157,7 +166,9 @@ export const Home = () => {
               className="text-center shadow-md rounded-md p-2"
               data-aos="fade-up"
             >
-              <h1 className="text-2xl font-bold pb-4">Life Skills</h1>
+              <h1 className="text-2xl font-bold pb-4" data-aos="flip-left">
+                Life Skills
+              </h1>
               <p>
                 Basketball equips the teens with basic life skills like team
                 work, resilience, and people skills. Beyond the court, our
@@ -170,7 +181,9 @@ export const Home = () => {
               className="text-center shadow-md rounded-md p-2"
               data-aos="fade-up"
             >
-              <h1 className="text-2xl font-bold pb-4">Leadership</h1>
+              <h1 className="text-2xl font-bold pb-4" data-aos="flip-left">
+                Leadership
+              </h1>
               <p>
                 We aim to cultivate the African leaders of tomorrow. We identify
                 and nurture leadership potential within our students. Teens
@@ -184,7 +197,9 @@ export const Home = () => {
               className="text-center shadow-md rounded-md p-2"
               data-aos="fade-up"
             >
-              <h1 className="text-2xl font-bold pb-4">Community Thinking</h1>
+              <h1 className="text-2xl font-bold pb-4" data-aos="flip-left">
+                Community Thinking
+              </h1>
               <p>
                 Basketball is not just a game — it is a unifier. Our program
                 fosters a sense of belonging and social responsibility in teens

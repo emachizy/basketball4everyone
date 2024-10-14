@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Img1 from "../assets/Img/Img1.png";
 import donateBg from "../assets/Img/donateBg.jpeg";
+import { Link } from "react-router-dom";
 
 const Donate = () => {
   useEffect(() => {
@@ -45,9 +46,12 @@ const Donate = () => {
                 living through basketball. Every bit counts in making a
                 difference. Thank you for your generosity
               </p>
-              <button className="bg-[#DA7600] text-white px-10 py-2 rounded-md text-center capitalize">
+              <Link
+                to="/donate"
+                className="bg-[#DA7600] text-white px-10 py-2 rounded-md text-center capitalize"
+              >
                 make a donation
-              </button>
+              </Link>
             </div>
             <div className="flex-initial md:w-[60%]" data-aos="fade-up">
               <img src={Img1} alt="Image" className="h-4/5" />

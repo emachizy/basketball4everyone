@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import AboutUsHeader from "../assets/Img/AboutUsHeaderBg.jpeg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   useEffect(() => {
@@ -126,18 +127,20 @@ const About = () => {
           className="flex justify-around items-center container mx-auto"
           data-aos="fade-up"
         >
-          <button
+          <Link
+            to="/donate"
             className="bg-[#DA7600] text-white px-10 py-2 rounded-md text-center"
             data-aos="fade-up"
           >
             Donate Today
-          </button>
-          <button
+          </Link>
+          <Link
+            to="/contactUs"
             className="bg-[#DA7600] text-white px-10 py-2 rounded-md text-center"
             data-aos="fade-up"
           >
             Volunteer With Us
-          </button>
+          </Link>
         </section>
 
         <Footer data-aos="fade-up" />
