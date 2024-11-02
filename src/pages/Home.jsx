@@ -25,13 +25,13 @@ export const Home = () => {
         {/* Hero section */}
         <section>
           <div
-            className="bg-gradient-to-tr from-gray-500 to-gray-950 md:h-screen h-full bg-cover bg-center w-full relative"
+            className="bg-gradient-to-tr from-gray-500 to-gray-950 md:h-screen bg-cover bg-center w-full relative"
             data-aos="fade-up"
           >
             <img
               src={HeaderBg}
               alt=""
-              className="w-full h-full object-cover absolute mix-blend-overlay"
+              className="w-full h-screen object-cover absolute mix-blend-overlay"
             />
             <div
               className="container mx-auto text-white text-center pt-8 md:px-0 px-4"
