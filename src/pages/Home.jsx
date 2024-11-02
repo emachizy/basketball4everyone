@@ -6,6 +6,7 @@ import Img from "../assets/Img/Img.png";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { TypeAnimation } from "react-type-animation";
 
 import { useEffect } from "react";
 
@@ -50,7 +51,26 @@ export const Home = () => {
                 At Basketball4Everyone Initiative, we are empowering the youths
                 in the streets with safe spaces, education, and skills they need
                 to thrive through the transformable power of basketball. Join
-                the movement.
+                the movement. <br />
+                <TypeAnimation
+                  className="font-bold bg-[#DA7600] px-2 py-1 rounded-md mt-2"
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    "We provide Education Awareness Programmes",
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    "We provide Health Care Programmes",
+                    1000,
+                    "We provide Sustainable Development Programmes",
+                    1000,
+                    1000,
+                    " ...We rise by lifting others",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  style={{ fontSize: "1em", display: "inline-block" }}
+                  repeat={Infinity}
+                />
               </p>
             </div>
             <Link
