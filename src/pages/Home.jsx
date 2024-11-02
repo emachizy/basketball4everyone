@@ -25,7 +25,7 @@ export const Home = () => {
         {/* Hero section */}
         <section>
           <div
-            className="bg-gradient-to-tr from-gray-500 to-gray-950 md:h-screen h-[100%] bg-cover bg-center w-full relative"
+            className="bg-gradient-to-tr from-gray-500 to-gray-950 h-screen bg-cover bg-center w-full relative"
             data-aos="fade-up"
           >
             <img
