@@ -81,7 +81,7 @@ NavLink {
     opacity: 0.9;
   }
 }
-.active {
+/* .active {
   background-color: #003566;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -89,7 +89,7 @@ NavLink {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s;
-}
+} */
 .nav-item {
   @apply relative text-blue-500 transition-all duration-300 ease-in-out;
 }
