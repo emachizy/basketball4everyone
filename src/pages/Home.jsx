@@ -25,7 +25,7 @@ export const Home = () => {
         {/* Hero section */}
         <section>
           <div
-            className="bg-gradient-to-tr from-gray-500 to-gray-950 h-screen bg-cover bg-center w-full relative"
+            className="bg-gradient-to-tr from-gray-500 to-gray-950 md:h-screen h-full bg-cover bg-center w-full relative"
             data-aos="fade-up"
           >
             <img
@@ -57,14 +57,14 @@ export const Home = () => {
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
                     "We provide Education Awareness Programmes",
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    2000, // wait 1s before replacing "Mice" with "Hamsters"
                     "We provide Health Care Programmes",
-                    1000,
+                    2000,
                     "We provide Sustainable Development Programmes",
-                    1000,
-                    1000,
+                    2000,
+                    2000,
                     " ...We rise by lifting others",
-                    1000,
+                    2000,
                   ]}
                   wrapper="span"
                   speed={50}

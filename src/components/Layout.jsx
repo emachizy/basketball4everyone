@@ -23,7 +23,7 @@ const Layout = () => {
 
   return (
     <>
-      <nav className="container mx-auto flex items-center justify-between py-6">
+      <nav className="m-2 flex items-center justify-between rounded-md px-4 py-6 shadow-2xl">
         <div className="flex">
           <Link to="/">
             <img src={Logo} alt="" className="w-16" />
