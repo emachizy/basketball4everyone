@@ -124,11 +124,6 @@ const Layout = () => {
               Contact Us{" "}
               <span className="absolute bottom-0 left-0 w-0 h-1 bg-[#da7600] transition-all duration-300 group-hover:w-full"></span>
             </NavLink>
-            <div>
-              <Link to="donate">
-                <Donate />
-              </Link>
-            </div>
           </div>
         </div>
         {/* mobile menu */}
@@ -188,6 +183,11 @@ const Layout = () => {
             </Link>
           </div>
         )}
+        <div>
+          <Link to="donate">
+            <Donate />
+          </Link>
+        </div>
       </nav>
 
       <Outlet />

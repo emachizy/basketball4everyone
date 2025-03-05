@@ -1,7 +1,7 @@
 // import React from "react";
-import { Link } from "react-router-dom";
-import Donate from "../components/Donate";
-import Img from "../assets/Img/Img.png";
+// import { Link } from "react-router-dom";
+// import Donate from "../components/Donate";
+// import Img from "../assets/Img/Img.png";
 // import Logo from "../assets/Logo.png";
 import Footer from "../components/Footer";
 import AOS from "aos";
@@ -11,13 +11,21 @@ import { TypeAnimation } from "react-type-animation";
 import { useEffect } from "react";
 
 import HeaderBg from "../assets/Img/HeaderBg.jpeg";
+import getInvolvedImg1 from "../assets/Img/getInvolved.jpeg";
+
+import { MdOutlineFollowTheSigns } from "react-icons/md";
+import { FaPeopleRoof } from "react-icons/fa6";
+import { SiHyperskill } from "react-icons/si";
+import { FaBasketballBall } from "react-icons/fa";
+import TestimonialSection from "../components/Testimonials";
+import { MdOutlineRoundaboutRight } from "react-icons/md";
 
 export const Home = () => {
   useEffect(() => {
     AOS.init({
       duration: 1200,
     });
-  });
+  }, []);
 
   return (
     <>
@@ -31,7 +39,7 @@ export const Home = () => {
             <img
               src={HeaderBg}
               alt=""
-              className="w-full h-full object-cover absolute mix-blend-overlay"
+              className="w-full min-h-screen object-cover absolute mix-blend-overlay"
             />
             <div
               className="container mx-auto text-white text-center pt-8 md:px-0 px-4"
@@ -45,7 +53,7 @@ export const Home = () => {
                 Basketball
               </h1>
               <p
-                className="text-white md:text-lg text-xl md:py-0 py-10 md:px-20"
+                className="text-white md:text-lg text-sm md:py-0 py-10 md:px-20"
                 data-aos="flip-left"
               >
                 At Basketball4Everyone Initiative, we are empowering the youths
@@ -53,7 +61,7 @@ export const Home = () => {
                 to thrive through the transformable power of basketball. Join
                 the movement. <br />
                 <TypeAnimation
-                  className="font-bold bg-[#DA7600] px-2 py-1 rounded-md mt-2"
+                  className="font-bold bg-gradient-to-tr from-black to-yellow-500 px-2 py-1 rounded-md mt-2"
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
                     "We provide Education Awareness Programmes",
@@ -61,7 +69,6 @@ export const Home = () => {
                     "We provide Health Care Programmes",
                     2000,
                     "We provide Sustainable Development Programmes",
-                    2000,
                     2000,
                     " ...We rise by lifting others",
                     2000,
@@ -73,19 +80,20 @@ export const Home = () => {
                 />
               </p>
             </div>
-            <Link
-              to="/donate"
-              className="mx-0 flex justify-center items-center z-10 py-5 md:py-10 absolute text-center left-[35%] md:left-[45%]"
-              data-aos="fade-up"
-            >
-              <Donate />
-            </Link>
+            {/* <div className="flex justify-center mt-10">
+              <Link to="/donate" className="bg-black">
+                <Donate />
+              </Link>
+            </div> */}
           </div>
         </section>
       </header>
       <main>
         {/* Counter Stats */}
-        <section className="bg-[#DA7600] md:mt-0" data-aos="fade-up">
+        <section
+          className="bg-gradient-to-tr from-black to-yellow-500 md:mt-0"
+          data-aos="fade-up"
+        >
           <div id="stats" className="text-white py-16 " data-aos="fade-up">
             <div className="mx-auto max-w-7xl px-6 lg:px-8" data-aos="fade-up">
               <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
@@ -134,35 +142,57 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-black" data-aos="fade-up">
+        <section className="bg-gray-50 py-20" data-aos="fade-up">
           <div
-            className="container mx-auto grid md:grid-cols-2 gap-5 py-10 md:px-0 px-4"
+            className="container mx-auto grid md:grid-cols-2 gap-10 px-4 md:px-0"
             data-aos="fade-up"
           >
-            <div className="text-white" data-aos="fade-up">
-              <h1 className="font-bold text-4xl pb-4">
-                We&apos;re Raising Future Champions From The Streets
+            <div
+              className="p-4 shadow-2xl rounded text-black hover:scale-105 transition-transform duration-300 ease-in-out block z-10"
+              data-aos="slide-right"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+            >
+              <h1 className="text-4xl font-bold pb-4">
+                Were Raising Future Champions From The Streets
               </h1>
-              <p>
-                In Africa, more than 16 million children live on the streets of
-                cities, uninhabitable slums, and neglected areas without access
-                to education or average facilities.These children, aged between
-                10 – 19 end up on the streets because of family poverty, stigma,
-                abuse, overcrowding, and neglect. They are exposed to dangerous
-                vices, substance abuse, and initiation to behavioral dysfunction
-                — posing a risk to not just their future, but the society at
-                large. They end up committing crimes, getting wasted, and never
-                actualizing their potential.
+              <p className="text-base">
+                In Africa, over 16 million children live on the streets, in
+                uninhabitable slums, and neglected areas, lacking access to
+                education or basic facilities. Aged 10–19, these children often
+                end up on the streets due to poverty, stigma, abuse,
+                overcrowding, or neglect. Exposed to dangerous vices, substance
+                abuse, and behavioral dysfunction, they risk not only their own
+                futures but also society’s. Many turn to crime, waste away, and
+                never realize their potential.
               </p>
             </div>
-            <div data-aos="fade-up">
-              <img src={Img} alt="" />
+            <div
+              data-aos="slide-left"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
+            >
+              <div className="w-full md:w-1/ h-full overflow-hidden">
+                <img
+                  src={getInvolvedImg1}
+                  alt="Volunteer Image"
+                  className="w-full h-full object-cover rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
+                />
+              </div>
             </div>
           </div>
         </section>
         {/* What we do */}
-        <section data-aos="fade-up">
-          <h1 className="text-3xl font-bold text-center py-10">What we do</h1>
+        <section data-aos="fade-up py-10">
+          <div className="flex justify-center gap-1 items-center text-sm text-[#DA7600] pt-10">
+            <MdOutlineRoundaboutRight className="text-[#da7600]" />
+            About
+          </div>
+          <h1 className="text-2xl font-bold mt-2 text-center pb-10">
+            What we do
+          </h1>
 
           <div
             className="grid md:grid-cols-2 gap-10 container mx-auto md:px-0 px-4"
@@ -172,7 +202,13 @@ export const Home = () => {
               className="text-center shadow-md rounded-md p-2"
               data-aos="fade-up"
             >
-              <h1 className="text-2xl font-bold pb-4" data-aos="flip-left">
+              <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text">
+                <FaBasketballBall />
+              </div>
+              <h1
+                className="text-2xl font-bold pb-4 bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
+                data-aos="flip-left"
+              >
                 Basketball Coaching
               </h1>
               <p>
@@ -186,7 +222,13 @@ export const Home = () => {
               className="text-center shadow-md rounded-md p-2"
               data-aos="fade-up"
             >
-              <h1 className="text-2xl font-bold pb-4" data-aos="flip-left">
+              <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text">
+                <SiHyperskill />
+              </div>
+              <h1
+                className="text-2xl pb-4 font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
+                data-aos="flip-left"
+              >
                 Life Skills
               </h1>
               <p>
@@ -201,7 +243,13 @@ export const Home = () => {
               className="text-center shadow-md rounded-md p-2"
               data-aos="fade-up"
             >
-              <h1 className="text-2xl font-bold pb-4" data-aos="flip-left">
+              <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text">
+                <MdOutlineFollowTheSigns />
+              </div>
+              <h1
+                className="text-2xl font-bold pb-4 bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
+                data-aos="flip-left"
+              >
                 Leadership
               </h1>
               <p>
@@ -217,7 +265,13 @@ export const Home = () => {
               className="text-center shadow-md rounded-md p-2"
               data-aos="fade-up"
             >
-              <h1 className="text-2xl font-bold pb-4" data-aos="flip-left">
+              <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text">
+                <FaPeopleRoof />
+              </div>
+              <h1
+                className="text-2xl font-bold pb-4 bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
+                data-aos="flip-left"
+              >
                 Community Thinking
               </h1>
               <p>
@@ -232,7 +286,9 @@ export const Home = () => {
             </div>
           </div>
         </section>
-
+        <section>
+          <TestimonialSection />
+        </section>
         <Footer />
       </main>
     </>

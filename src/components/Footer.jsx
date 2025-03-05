@@ -172,7 +172,7 @@ const Footer = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[#DA7600] text-white py-5 font-bold">
+        <section className="bg-gradient-to-tr from-black to-yellow-500 text-white py-5 font-bold">
           <p className="text-center text-white">
             &copy; 2024 EmTech. All rights reserved
           </p>
