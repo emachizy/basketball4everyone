@@ -2,6 +2,7 @@ import { Outlet, Link, NavLink } from "react-router-dom";
 import Logo from "../assets/Img/Logo.png";
 import Donate from "./Donate";
 import { useState, useEffect, useRef } from "react";
+import BecomeAVolunteer from "./BecomeAVolunteer";
 
 const Layout = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -188,8 +189,20 @@ const Layout = () => {
             >
               <Donate />
             </Link>
+            <Link
+              to="volunteer"
+              className="w-full text-left pl-6 py-2 hover:bg-gray-100"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <BecomeAVolunteer />
+            </Link>
           </div>
         )}
+        <div className="hidden md:block">
+          <Link to="volunteer">
+            <BecomeAVolunteer />
+          </Link>
+        </div>
 
         {/* Donate Button (Desktop) */}
         <div className="hidden md:block">

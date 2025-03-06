@@ -100,3 +100,9 @@ NavLink {
 .nav-item:hover::after {
   @apply scale-x-100;
 }
+
+@media (width: 820px) and (height: 1180px) {
+  .custom-820-1180-text-sm {
+    font-size: 0.875rem; /* 8px */
+  }
+}

@@ -1,25 +1,20 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import Donate from "../components/Donate";
-// import Img from "../assets/Img/Img.png";
-// import Logo from "../assets/Logo.png";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
-
-import { useEffect } from "react";
-
 import HeaderBg from "../assets/Img/HeaderBg.jpeg";
 import getInvolvedImg1 from "../assets/Img/getInvolved.jpeg";
-
 import { MdOutlineFollowTheSigns } from "react-icons/md";
 import { FaPeopleRoof } from "react-icons/fa6";
 import { SiHyperskill } from "react-icons/si";
 import { FaBasketballBall } from "react-icons/fa";
-// import TestimonialSection from "../components/Testimonials";
 import { MdOutlineRoundaboutRight } from "react-icons/md";
 import JoinUs from "../components/JoinUs";
+import Donate from "../components/Donate";
+import BecomeAVolunteer from "../components/BecomeAVolunteer";
+import Map from "../components/Map";
 
 export const Home = () => {
   useEffect(() => {
@@ -31,7 +26,6 @@ export const Home = () => {
   return (
     <>
       <header className="" data-aos="fade-up">
-        {/* Hero section */}
         <section>
           <div
             className="bg-gradient-to-tr from-gray-500 to-gray-950 h-screen bg-cover bg-center w-full relative"
@@ -39,8 +33,8 @@ export const Home = () => {
           >
             <img
               src={HeaderBg}
-              alt=""
-              className="w-full min-h-screen object-cover absolute mix-blend-overlay"
+              alt="Basketball4everyone Header Background"
+              className="w-full h-screen object-cover absolute mix-blend-overlay"
             />
             <div
               className="container mx-auto text-white text-center pt-8 md:px-0 px-4"
@@ -64,9 +58,8 @@ export const Home = () => {
                 <TypeAnimation
                   className="font-bold bg-gradient-to-tr from-black to-yellow-500 px-2 py-1 rounded-md mt-2"
                   sequence={[
-                    // Same substring at the start will only be typed out once, initially
                     "We provide Education Awareness Programmes",
-                    2000, // wait 1s before replacing "Mice" with "Hamsters"
+                    2000,
                     "We provide Health Care Programmes",
                     2000,
                     "We provide Sustainable Development Programmes",
@@ -81,11 +74,18 @@ export const Home = () => {
                 />
               </p>
             </div>
-            {/* <div className="flex justify-center mt-10">
-              <Link to="/donate" className="bg-black">
-                <Donate />
-              </Link>
-            </div> */}
+            <div className="md:flex justify-center items-center gap-2 mt-10 bg-transparent relative z-10 my-2">
+              <div>
+                <Link to="/donate">
+                  <Donate />
+                </Link>
+              </div>
+              <div>
+                <Link to="/volunteer">
+                  <BecomeAVolunteer />
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
       </header>
@@ -95,7 +95,7 @@ export const Home = () => {
           className="bg-gradient-to-tr from-black to-yellow-500 md:mt-0"
           data-aos="fade-up"
         >
-          <div id="stats" className="text-white py-16 " data-aos="fade-up">
+          <div id="stats" className="text-white py-16" data-aos="fade-up">
             <div className="mx-auto max-w-7xl px-6 lg:px-8" data-aos="fade-up">
               <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
                 <div
@@ -107,7 +107,6 @@ export const Home = () => {
                   </dt>
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
                     <span className="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-teens)] before:content-[counter(num)]">
-                      {" "}
                       <span className="sr-only">100</span>+ Teens
                     </span>
                   </dd>
@@ -121,8 +120,7 @@ export const Home = () => {
                   </dt>
                   <dd className="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">
                     <span className="animate-[counter_3s_ease-out_forwards] tabular-nums [counter-set:_num_var(--num-years)] before:content-[counter(num)]">
-                      {" "}
-                      <span className="sr-only">2</span>+ Years{" "}
+                      <span className="sr-only">2</span>+ Years
                     </span>
                   </dd>
                 </div>
@@ -143,9 +141,10 @@ export const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* Raising Champions Section */}
         <section className="bg-gray-50 py-20" data-aos="fade-up">
           <div className="container mx-auto grid md:grid-cols-2 gap-10 px-4 md:px-0">
-            {/* Left Column - Text Content */}
             <div
               className="p-6 shadow-2xl rounded-lg bg-white text-black hover:scale-105 transition-transform duration-300 ease-in-out"
               data-aos="slide-right"
@@ -167,8 +166,6 @@ export const Home = () => {
                 never realize their potential.
               </p>
             </div>
-
-            {/* Right Column - Image */}
             <div
               className="w-full h-full overflow-hidden rounded-xl"
               data-aos="slide-left"
@@ -177,14 +174,15 @@ export const Home = () => {
               data-aos-duration="600"
             >
               <img
-                src={getInvolvedImg1} // Replace with your image path
+                src={getInvolvedImg1}
                 alt="Volunteer Image"
                 className="w-full h-full object-cover rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
               />
             </div>
           </div>
         </section>
-        {/* What we do */}
+
+        {/* What We Do Section */}
         <section data-aos="fade-up py-10">
           <div className="flex justify-center gap-1 items-center text-sm text-[#DA7600] pt-10">
             <MdOutlineRoundaboutRight className="text-[#da7600]" />
@@ -193,7 +191,6 @@ export const Home = () => {
           <h1 className="text-2xl font-bold mt-2 text-center pb-10">
             What we do
           </h1>
-
           <div
             className="grid md:grid-cols-2 gap-10 container mx-auto md:px-0 px-4"
             data-aos="fade-up"
@@ -287,9 +284,15 @@ export const Home = () => {
           </div>
         </section>
 
+        {/* Join Us Section */}
         <section className="bg-gray-50 py-10">
           <JoinUs />
         </section>
+
+        {/* Map Section */}
+
+        <Map />
+        {/* Footer */}
         <Footer />
       </main>
     </>

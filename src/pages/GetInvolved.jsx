@@ -6,6 +6,7 @@ import getInvolvedImg1 from "../assets/Img/getInvolvedImg1.png";
 import getInvolvedImg2 from "../assets/Img/getInvolvedImg2.jpeg";
 import sendAMessage from "../assets/Img/sendAMessage.jpeg";
 import { Link } from "react-router-dom";
+import BecomeAVolunteer from "../components/BecomeAVolunteer";
 
 const GetInvolved = () => {
   return (
@@ -23,13 +24,10 @@ const GetInvolved = () => {
         </div>
       </header>
       <main>
-        <section className="w-full container mx-auto">
+        <section className="w-full container mx-auto mt-6">
           <div className="text-center">
-            <Link
-              to="/volunteer"
-              className="mt-6 inline-block bg-orange-600 hover:bg-white hover:text-orange-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-md"
-            >
-              Become a Volunteer
+            <Link to="/volunteer">
+              <BecomeAVolunteer />
             </Link>
           </div>
           <h1 className="text-4xl font-bold text-center py-10 capitalize">

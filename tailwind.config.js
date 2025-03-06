@@ -13,6 +13,9 @@ export default {
       animation: {
         "open-menu": "open-menu 0.5s ease-in-out forwards",
       },
+      screens: {
+        "820px": "820px", // Custom breakpoint for 820px width
+      },
     },
   },
   plugins: [],
