@@ -25,7 +25,36 @@ const Footer = () => {
     <>
       {/* Footer section */}
       <footer className="mt-10" data-aos="fade-up">
-        <section className="bg-black px-5" data-aos="fade-up">
+        {/* top footer */}
+        <section className="md:w-4/5 md:mx-auto bg-gradient-to-tr from-white to-yellow-500 p-6 rounded-2xl mx-4 relative z-10 -mb-14">
+          <div className=" grid md:grid-cols-3 gap-5 ">
+            <div className="flex justify-center items-center gap-4">
+              <div>
+                <FaLocationDot className="text-[#DA7600]" />
+              </div>
+              <div>
+                <p>Address</p>
+                <h3>5 Bucknor savage boulevard</h3>
+              </div>
+            </div>
+            <div className="flex justify-center items-center gap-4">
+              <MdEmail className="text-[#DA7600]" />
+              <a
+                href="mailto:basketball4everyone@gmail.com"
+                className="text-[#000]"
+              >
+                Send Email
+              </a>
+            </div>
+            <div className="flex justify-center items-center gap-4">
+              <FaPhoneAlt className="text-[#DA7600]" />
+              <a href="tel:+234-8127709163" className="text-[#000]">
+                +234-8127709163
+              </a>
+            </div>
+          </div>
+        </section>
+        <section className="bg-black px-5 pt-14" data-aos="fade-up">
           <div
             className="grid md:grid-cols-4 grid-cols-1 justify-items-center w-full py-10"
             data-aos="fade-up"
@@ -121,7 +150,7 @@ const Footer = () => {
                   href="mailto:basketball4everyone@gmail.com"
                   className="text-[#DA7600]"
                 >
-                  Send Email
+                  basketball4everyone@gmail.com
                 </a>
               </div>
               <div className="py-5 md:block flex gap-2 justify-center items-center">
