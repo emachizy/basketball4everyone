@@ -1,35 +1,34 @@
 import { Outlet, Link, NavLink } from "react-router-dom";
 import Logo from "../assets/Img/Logo.png";
 import Donate from "./Donate";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Layout = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dropdownRef = useRef(null); // Ref to track dropdown element
 
-  // useEffect(() => {
-  //   const handleClickOutside = () => {
-  //     if (isMenuOpen) {
-  //       setIsMenuOpen(false);
-  //     }
-  //   }; // Attach the event listener when the component mounts
-
-  //   document.addEventListener("click", handleClickOutside); // Clean up the event listener when the component unmounts
-
-  //   return () => {
-  //     document.removeEventListener("click", handleClickOutside);
-  //   };
-  // }, [isMenuOpen]);
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
   return (
     <>
       <nav className="m-2 flex items-center justify-between rounded-md px-4 py-6 shadow-2xl">
         <div className="flex">
           <Link to="/">
-            <img src={Logo} alt="" className="w-16" />
+            <img src={Logo} alt="Basketball4everyone Logo" className="w-16" />
           </Link>
         </div>
 
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -68,48 +67,55 @@ const Layout = () => {
             )}
           </button>
         </div>
+
+        {/* Desktop Navigation */}
         <div className="md:flex justify-between items-center hidden">
           <div className="flex gap-6 justify-center items-center">
             <NavLink
               to="/"
-              className={` ${(isActive) => (isActive ? "active" : "")}
-                relative group font-bold hover:text-gray-600
-              `}
+              className="relative group font-bold hover:text-gray-600"
             >
               Home
               <span className="absolute bottom-0 left-0 w-0 h-1 bg-[#da7600] transition-all duration-300 group-hover:w-full"></span>
             </NavLink>
-            <NavLink
-              to="about"
-              className="relative group font-bold hover:text-gray-600"
-            >
-              About Us{" "}
-              <span
-                onClick={() => setIsOpen((prev) => !prev)}
-                className="m-0 p-0 gap-0"
-              >
-                {isOpen ? <span>&#9650;</span> : <span>&#9660;</span>}
-              </span>
-              <span className="absolute bottom-0 left-0 w-0 h-1 bg-[#da7600] transition-all duration-300 group-hover:w-full"></span>
-            </NavLink>
 
-            {/* nav dropdown */}
-            {isOpen && (
-              <div className="flex flex-col w-36 gap-4 justify-center items-center absolute right-96 bg-white shadow-lg py-2 mt-32 z-10 border-2 border-t-[#da7600]">
+            {/* About Us with Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <div className="flex items-center gap-1">
                 <NavLink
-                  to="ourProject"
-                  className="border-b-2 w-full text-center"
+                  to="about"
+                  className="relative group font-bold hover:text-gray-600"
                 >
-                  Our Projects
+                  About Us
+                  <span className="absolute bottom-0 left-0 w-0 h-1 bg-[#da7600] transition-all duration-300 group-hover:w-full"></span>
                 </NavLink>
-                <NavLink
-                  to="meetTheTeam"
-                  className="border-b-2 w-full text-center"
+                <button
+                  onClick={() => setIsOpen((prev) => !prev)}
+                  className="text-[#da7600] focus:outline-none"
                 >
-                  Our Team
-                </NavLink>
+                  {isOpen ? "▲" : "▼"}
+                </button>
               </div>
-            )}
+              {isOpen && (
+                <div className="absolute left-0 mt-2 w-36 bg-white shadow-lg rounded-md py-2 z-10 border-t-2 border-[#da7600]">
+                  <NavLink
+                    to="ourProject"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Our Projects
+                  </NavLink>
+                  <NavLink
+                    to="meetTheTeam"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Our Team
+                  </NavLink>
+                </div>
+              )}
+            </div>
+
             <NavLink
               to="getInvolved"
               className="relative group font-bold hover:text-gray-600"
@@ -121,69 +127,72 @@ const Layout = () => {
               to="contactUs"
               className="relative group font-bold hover:text-gray-600"
             >
-              Contact Us{" "}
+              Contact Us
               <span className="absolute bottom-0 left-0 w-0 h-1 bg-[#da7600] transition-all duration-300 group-hover:w-full"></span>
             </NavLink>
           </div>
         </div>
-        {/* mobile menu */}
+
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div
-            className="flex flex-col w-full gap-4 justify-center items-left absolute right-0 bg-white shadow-lg py-2 mt-96 z-10 border-2 border-t-[#da7600] origin-top animate-open-menu"
+            className="flex flex-col w-full gap-4 justify-center items-left absolute left-0 top-20 bg-white shadow-lg py-2 z-10 border-2 border-t-[#da7600] origin-top animate-open-menu md:hidden"
             aria-label="mobile"
           >
             <NavLink
               to="/"
-              className="border-b-2 w-full text-left pl-6"
+              className="border-b-2 w-full text-left pl-6 py-2 hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </NavLink>
             <NavLink
               to="about"
-              className="border-b-2 w-full text-left pl-6"
+              className="border-b-2 w-full text-left pl-6 py-2 hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </NavLink>
             <NavLink
               to="ourProject"
-              className="border-b-2 w-full text-left pl-6"
+              className="border-b-2 w-full text-left pl-6 py-2 hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Our Projects
             </NavLink>
             <NavLink
               to="meetTheTeam"
-              className="border-b-2 w-full text-left pl-6"
+              className="border-b-2 w-full text-left pl-6 py-2 hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Our Team
             </NavLink>
             <NavLink
               to="getInvolved"
-              className="border-b-2 w-full text-left pl-6"
+              className="border-b-2 w-full text-left pl-6 py-2 hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Get Involved
             </NavLink>
             <NavLink
               to="contactUs"
-              className="border-b-2 w-full text-left pl-6"
+              className="border-b-2 w-full text-left pl-6 py-2 hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact Us
             </NavLink>
             <Link
               to="donate"
+              className="w-full text-left pl-6 py-2 hover:bg-gray-100"
               onClick={() => setIsMenuOpen(false)}
-              className="hover:bg-[#da7]"
             >
               <Donate />
             </Link>
           </div>
         )}
-        <div>
+
+        {/* Donate Button (Desktop) */}
+        <div className="hidden md:block">
           <Link to="donate">
             <Donate />
           </Link>

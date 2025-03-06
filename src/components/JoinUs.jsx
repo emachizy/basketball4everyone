@@ -33,7 +33,7 @@ export default function JoinUs() {
           <Accordion
             expanded={expanded === "panel1"}
             onChange={handleChange("panel1")}
-            className="mb-4 bg-gray-100 border border-gray-200 rounded-lg shadow-md"
+            className="mb-4 bg-gray-100 border border-gray-200 rounded-lg shadow-md "
           >
             <AccordionSummary
               expandIcon={
@@ -45,7 +45,7 @@ export default function JoinUs() {
               }
               aria-controls="panel1-content"
               id="panel1-header"
-              className="bg-gray-50"
+              className="bg-gray-50 rounded"
             >
               <Typography
                 component="span"
