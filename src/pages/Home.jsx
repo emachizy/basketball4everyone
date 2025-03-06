@@ -17,8 +17,9 @@ import { MdOutlineFollowTheSigns } from "react-icons/md";
 import { FaPeopleRoof } from "react-icons/fa6";
 import { SiHyperskill } from "react-icons/si";
 import { FaBasketballBall } from "react-icons/fa";
-import TestimonialSection from "../components/Testimonials";
+// import TestimonialSection from "../components/Testimonials";
 import { MdOutlineRoundaboutRight } from "react-icons/md";
+import JoinUs from "../components/JoinUs";
 
 export const Home = () => {
   useEffect(() => {
@@ -143,21 +144,19 @@ export const Home = () => {
           </div>
         </section>
         <section className="bg-gray-50 py-20" data-aos="fade-up">
-          <div
-            className="container mx-auto grid md:grid-cols-2 gap-10 px-4 md:px-0"
-            data-aos="fade-up"
-          >
+          <div className="container mx-auto grid md:grid-cols-2 gap-10 px-4 md:px-0">
+            {/* Left Column - Text Content */}
             <div
-              className="p-4 shadow-2xl rounded text-black hover:scale-105 transition-transform duration-300 ease-in-out block z-10"
+              className="p-6 shadow-2xl rounded-lg bg-white text-black hover:scale-105 transition-transform duration-300 ease-in-out"
               data-aos="slide-right"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
             >
-              <h1 className="text-4xl font-bold pb-4">
-                Were Raising Future Champions From The Streets
+              <h1 className="text-3xl md:text-4xl font-bold pb-4">
+                We&apos;re Raising Future Champions From The Streets
               </h1>
-              <p className="text-base">
+              <p className="text-base leading-relaxed">
                 In Africa, over 16 million children live on the streets, in
                 uninhabitable slums, and neglected areas, lacking access to
                 education or basic facilities. Aged 10–19, these children often
@@ -168,19 +167,20 @@ export const Home = () => {
                 never realize their potential.
               </p>
             </div>
+
+            {/* Right Column - Image */}
             <div
+              className="w-full h-full overflow-hidden rounded-xl"
               data-aos="slide-left"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
             >
-              <div className="w-full md:w-1/ h-full overflow-hidden">
-                <img
-                  src={getInvolvedImg1}
-                  alt="Volunteer Image"
-                  className="w-full h-full object-cover rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
-                />
-              </div>
+              <img
+                src={getInvolvedImg1} // Replace with your image path
+                alt="Volunteer Image"
+                className="w-full h-full object-cover rounded-xl shadow-xl transition-all duration-300 hover:scale-105"
+              />
             </div>
           </div>
         </section>
@@ -286,8 +286,9 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section>
-          <TestimonialSection />
+
+        <section className="bg-gray-50 py-10">
+          <JoinUs />
         </section>
         <Footer />
       </main>

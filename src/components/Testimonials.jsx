@@ -89,7 +89,7 @@ const TestimonialSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prev) => (prev + 1) % testimonials.length);
-    }, 3000); // Slide every 3 seconds
+    }, 6000); // Slide every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
