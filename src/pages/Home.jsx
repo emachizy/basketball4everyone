@@ -147,7 +147,7 @@ export const Home = () => {
           <div className="container mx-auto grid md:grid-cols-2 gap-10 px-4 md:px-0">
             <div
               className="p-6 shadow-2xl rounded-lg bg-white text-black hover:scale-105 transition-transform duration-300 ease-in-out"
-              data-aos="slide-right"
+              data-aos="slide-up"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
@@ -168,7 +168,7 @@ export const Home = () => {
             </div>
             <div
               className="w-full h-full overflow-hidden rounded-xl"
-              data-aos="slide-left"
+              data-aos="fade-down"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
