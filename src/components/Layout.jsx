@@ -22,7 +22,7 @@ const Layout = () => {
 
   return (
     <>
-      <nav className="m-2 flex items-center justify-between rounded-md px-4 py-6 shadow-2xl">
+      <nav className="m-2 flex items-center justify-between rounded-md px-4 py-6 shadow-2xl sticky top-0 bg-white z-50">
         <div className="flex">
           <Link to="/">
             <img src={Logo} alt="Basketball4everyone Logo" className="w-16" />
