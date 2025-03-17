@@ -28,7 +28,7 @@ export const Home = () => {
       <header className="" data-aos="fade-up">
         <section>
           <div
-            className="bg-gradient-to-tr from-gray-500 to-gray-950 h-screen bg-cover bg-center w-full relative"
+            className="bg-gradient-to-tr from-gray-500 to-gray-950 md:h-scren bg-cover bg-center w-full relative rounded"
             data-aos="fade-up"
           >
             <img
@@ -41,7 +41,7 @@ export const Home = () => {
               data-aos="fade-up"
             >
               <h1
-                className="md:text-6xl text-2xl font-bold pt-24 md:py-5 md:pt-32 md:px-2"
+                className="md:text-4xl text-2xl font-bold pt-24 md:py-5 md:pt-32 md:px-2"
                 data-aos="flip-left"
               >
                 Help Give Neglected Teens in Africa a Brighter Future Through
@@ -93,14 +93,14 @@ export const Home = () => {
         {/* Counter Stats */}
         <section
           className="bg-gradient-to-tr from-black to-yellow-500 md:mt-0"
-          data-aos="fade-up"
+          data-aos="fade-p"
         >
-          <div id="stats" className="text-white py-16" data-aos="fade-up">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8" data-aos="fade-up">
+          <div id="stats" className="text-white py-16" data-aos="fade-p">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8" data-aos="fade-p">
               <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
                 <div
                   className="mx-auto flex max-w-xs flex-col gap-y-4"
-                  data-aos="fade-up"
+                  data-aos="fade-p"
                 >
                   <dt className="text-base leading-7 text-white">
                     Empowered through basketball training.
@@ -113,7 +113,7 @@ export const Home = () => {
                 </div>
                 <div
                   className="mx-auto flex max-w-xs flex-col gap-y-4"
-                  data-aos="fade-up"
+                  data-aos="fade-p"
                 >
                   <dt className="text-base leading-7 text-white">
                     Of continuous grassroot impact
@@ -126,7 +126,7 @@ export const Home = () => {
                 </div>
                 <div
                   className="mx-auto flex max-w-xs flex-col gap-y-4"
-                  data-aos="fade-up"
+                  data-aos="fade-p"
                 >
                   <dt className="text-base leading-7 text-white">
                     Young drug addict rehabilitated
@@ -143,11 +143,14 @@ export const Home = () => {
         </section>
 
         {/* Raising Champions Section */}
-        <section className="bg-gray-50 py-20" data-aos="fade-up">
+        <section
+          className="bg-gray-50 py-20 overflow-hidden"
+          data-aos="fade-up"
+        >
           <div className="container mx-auto grid md:grid-cols-2 gap-10 px-4 md:px-0">
             <div
               className="p-6 shadow-2xl rounded-lg bg-white text-black hover:scale-105 transition-transform duration-300 ease-in-out"
-              data-aos="slide-up"
+              data-aos="slide-left"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
@@ -168,7 +171,7 @@ export const Home = () => {
             </div>
             <div
               className="w-full h-full overflow-hidden rounded-xl"
-              data-aos="fade-down"
+              data-aos="slide-right"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
