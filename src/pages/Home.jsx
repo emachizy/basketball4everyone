@@ -13,7 +13,7 @@ import { FaBasketballBall } from "react-icons/fa";
 import { MdOutlineRoundaboutRight } from "react-icons/md";
 import JoinUs from "../components/JoinUs";
 import Donate from "../components/Donate";
-import BecomeAVolunteer from "../components/BecomeAVolunteer";
+// import BecomeAVolunteer from "../components/BecomeAVolunteer";
 import Map from "../components/Map";
 
 export const Home = () => {
