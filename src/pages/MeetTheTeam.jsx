@@ -14,6 +14,64 @@ import richard from "../assets/Img/richard.jpeg";
 import riskat from "../assets/Img/riskat.jpeg";
 import samson from "../assets/Img/samson.jpeg";
 import yetunde from "../assets/Img/yetunde.jpeg";
+import LazyImage from "../components/LazyLoading";
+
+const teamMembers = [
+  {
+    name: "Epere Paschal",
+    role: "Executive Director",
+    image: pascal,
+    alt: "Pascal Epere image",
+  },
+  {
+    name: "Samuel Ajayi",
+    role: "Programs Manager/ Coach",
+    image: ajayi,
+    alt: "Ajayi Samuel image",
+  },
+  {
+    name: "Yetunde Martins",
+    role: "HR & Admin Manager",
+    image: yetunde,
+    alt: "Yetunde image",
+  },
+  {
+    name: "Emmanuel Samson",
+    role: "Monitoring and Evaluation Coordinator/ Coach",
+    image: samson,
+    alt: "Emmanuel Samson image",
+  },
+  {
+    name: "Ayomide Eleboda",
+    role: "Outreach Manager",
+    image: ayomide,
+    alt: "Ayomide Eleboda image",
+  },
+  {
+    name: "Richard Obiozo",
+    role: "Finance Officer",
+    image: richard,
+    alt: "Richard Obiozo image",
+  },
+  {
+    name: "Emmanuel Nwankwo",
+    role: "ICT Manager/ Coach",
+    image: emmanuel,
+    alt: "Emmanuel Nwankwo image",
+  },
+  {
+    name: "Daniel Arowojobe",
+    role: "Volunteers Coordinator",
+    image: daniel,
+    alt: "Daniel Arowojobe image",
+  },
+  {
+    name: "Riskat Ajisegiri",
+    role: "Volunteers Coordinator",
+    image: riskat,
+    alt: "Riskat Ajisegiri image",
+  },
+];
 
 const MeetTheTeam = () => {
   useEffect(() => {
@@ -28,7 +86,7 @@ const MeetTheTeam = () => {
           className="bg-gradient-to-tr from-gray-500 to-slate-950 h-72 bg-cover bg-center w-full relative"
           data-aos="fade-up"
         >
-          <img
+          <LazyImage
             src={meetTheteamBg}
             alt=""
             className="w-full h-full object-cover absolute mix-blend-overlay"
@@ -44,7 +102,7 @@ const MeetTheTeam = () => {
           data-aos="fade-up"
         >
           <figure>
-            <img src={obiozor} alt="Obiozor" className="rounded" />
+            <LazyImage src={obiozor} alt="Obiozor" className="rounded" />
             <figcaption className="text-gray-500 pt-2 font-bold">
               Onyeka Obiozo
             </figcaption>
@@ -67,153 +125,28 @@ const MeetTheTeam = () => {
             Basketball4Everyone.
           </p>
         </section>
-        <section className="my-20 p-4 md:mx-0 mx-5" data-aos="fade-up">
+        <section className="my-20 p-4" data-aos="fade-up">
           <h1 className="text-4xl text-center font-bold py-10 capitalize">
             meet the team
           </h1>
-          <div className="md:grid grid-cols-3 container mx-auto w-full gap-10">
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={pascal}
-                alt="Pascal Epere image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Epere Paschal
-              </figcaption>
-              <figcaption className="text-gray-500">
-                Executive Director
-              </figcaption>
-            </figure>
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={ajayi}
-                alt="Ajayi Samuel image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Samuel Ajayi
-              </figcaption>
-              <figcaption className="text-gray-500">
-                Programs Manager/ Coach
-              </figcaption>
-            </figure>
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={yetunde}
-                alt="Yetunde image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Yetunde Martins
-              </figcaption>
-              <figcaption className="text-gray-500">
-                HR & Admin Manager
-              </figcaption>
-            </figure>
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={samson}
-                alt="Emmanuel Samson image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Emmanuel Samson
-              </figcaption>
-              <figcaption className="text-gray-500">
-                Monitoring and Evaluation Coordinator/ Coach
-              </figcaption>
-            </figure>
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={ayomide}
-                alt="Ayomide Eleboda image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Ayomide Eleboda
-              </figcaption>
-              <figcaption className="text-gray-500">
-                Outreach Manager
-              </figcaption>
-            </figure>
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={richard}
-                alt="Richard Obiozo image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Richard Obiozo
-              </figcaption>
-              <figcaption className="text-gray-500">Finance Officer</figcaption>
-            </figure>
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={emmanuel}
-                alt="Emmanuel Nwankwo image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Emmanuel Nwankwo
-              </figcaption>
-              <figcaption className="text-gray-500">
-                ICT Manager/ Coach
-              </figcaption>
-            </figure>
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={daniel}
-                alt="Daniel Arowojobe image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Daniel Arowojobe
-              </figcaption>
-              <figcaption className="text-gray-500">
-                Volunteers Coordinator
-              </figcaption>
-            </figure>
-            <figure
-              className="bg-white shadow-lg rounded-lg p-6 text-center"
-              data-aos="fade-up"
-            >
-              <img
-                src={riskat}
-                alt="Riskat Ajisegiri image"
-                className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto "
-              />
-              <figcaption className="text-gray-500 pt-2 font-bold">
-                Riskat Ajisegiri
-              </figcaption>
-              <figcaption className="text-gray-500">
-                Volunteers Coordinator
-              </figcaption>
-            </figure>
+          <div className="grid md:grid-cols-3 container mx-auto w-full gap-10">
+            {teamMembers.map((member, idx) => (
+              <figure
+                key={member.name + idx}
+                className="bg-white shadow-lg rounded-lg p-6 text-center"
+                data-aos="fade-up"
+              >
+                <LazyImage
+                  src={member.image}
+                  alt={member.alt}
+                  className="object-cover select-none w-44 h-44 bg-gray-200 rounded cursor-zoom-in aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4] mx-auto"
+                />
+                <figcaption className="text-gray-500 pt-2 font-bold">
+                  {member.name}
+                </figcaption>
+                <figcaption className="text-gray-500">{member.role}</figcaption>
+              </figure>
+            ))}
           </div>
         </section>
       </main>

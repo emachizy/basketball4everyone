@@ -28,29 +28,29 @@ export const Home = () => {
       <header className="" data-aos="fade-up">
         <section>
           <div
-            className="md:h-screen h-[80vh] bg-cover bg-center w-full relative rounded "
+            className="h-[50vh] md:h-screen bg-cover bg-center w-full relative rounded "
             data-aos="fade-up"
           >
             <img
               src={HeaderBg}
               alt="Basketball4everyone Header Background"
-              className="w-full h-full object-cover absolute mix-blend-overlay"
+              className="w-full h-[60vh] md:h-full  object-cover"
             />
           </div>
-          <div className="absolute bg-black/20 inset-0 w-full h-full">
+          <div className="absolute bg-black/50 inset-0 w-full h-full">
             <div
-              className="max-w-3xl container mx-auto text-white text-center pt-8 md:px-0 px-4"
+              className="max-w-3xl container mx-auto text-white text-center md:px-0 px-4"
               data-aos="fade-up"
             >
               <h1
-                className="md:text-4xl text-2xl font-bold pt-24 md:py-5 md:pt-32 md:px-2"
+                className="md:text-4xl text-2xl font-bold pt-10 md:py-5 md:pt-32 md:px-2"
                 data-aos="flip-left"
               >
                 Help Give Neglected Teens in Africa a Brighter Future Through
                 Basketball
               </h1>
               <p
-                className="text-white md:text-lg text-sm md:py-0 py-10 md:px-20"
+                className="text-white md:text-lg text-sm md:py-0 py-5 md:px-20"
                 data-aos="flip-left"
               >
                 At Basketball4Everyone Initiative, we are empowering the youths
@@ -58,7 +58,7 @@ export const Home = () => {
                 to thrive through the transformable power of basketball. Join
                 the movement. <br />
                 <TypeAnimation
-                  className="font-bold bg-gradient-to-tr from-black to-yellow-500 px-2 py-1 rounded-md mt-2"
+                  className="font-bold bg-gradient-to-tr from-black to-yellow-500 px-2 py-2 rounded-md mt-2"
                   sequence={[
                     "We provide Education Awareness Programmes",
                     2000,
@@ -76,7 +76,7 @@ export const Home = () => {
                 />
               </p>
             </div>
-            <div className="md:flex justify-center items-center gap-2 mt-10 bg-transparent relative z-10 my-2">
+            <div className="md:flex justify-center items-center gap-2 mt-4 md:mt-10 bg-transparent relative z-10">
               <div>
                 <Link to="/donate">
                   <Donate />
@@ -93,10 +93,7 @@ export const Home = () => {
       </header>
       <main>
         {/* Counter Stats */}
-        <section
-          className="bg-gradient-to-tr from-black to-yellow-500 md:mt-0"
-          data-aos="fade-p"
-        >
+        <section className="bg-yellow-500 md:mt-0" data-aos="fade-p">
           <div id="stats" className="text-white py-16" data-aos="fade-p">
             <div className="mx-auto max-w-7xl px-6 lg:px-8" data-aos="fade-p">
               <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
