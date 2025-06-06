@@ -22,7 +22,7 @@ const Contact = () => {
     <>
       <header>
         <div
-          className="bg-gradient-to-tr from-gray-500 to-slate-950 h-[60vh] md:h-72 w-full relative"
+          className="bg-gradient-to-tr from-gray-500 to-slate-950 h-[40vh] md:h-72 w-full relative"
           data-aos="fade-up"
         >
           <LazyImage

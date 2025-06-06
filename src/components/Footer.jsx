@@ -25,7 +25,7 @@ const Footer = () => {
     <>
       {/* Footer section */}
       <footer className="mt-10" data-aos="fade-up">
-        {/* top footer */}
+        {/* top footer
         <section className="md:w-4/5 md:mx-auto bg-gradient-to-tr from-white to-yellow-500 p-6 rounded-2xl mx-4 relative z-10 -mb-14">
           <div className=" grid md:grid-cols-3 gap-5 ">
             <div className="flex justify-center items-center gap-4">
@@ -53,7 +53,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="bg-black px-5 pt-14" data-aos="fade-up">
           <div
             className="grid md:grid-cols-4 grid-cols-1 justify-items-center w-full py-10"

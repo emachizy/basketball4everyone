@@ -83,15 +83,17 @@ const MeetTheTeam = () => {
     <>
       <header>
         <div
-          className="bg-gradient-to-tr from-gray-500 to-slate-950 h-72 bg-cover bg-center w-full relative"
+          className="bg-gradient-to-tr from-gray-500 to-slate-950 h-[40vh] md:h-72 bg-cover bg-center w-full relative"
           data-aos="fade-up"
         >
           <LazyImage
             src={meetTheteamBg}
             alt=""
-            className="w-full h-full object-cover absolute mix-blend-overlay"
+            className="w-full h-full object-cover mix-blend-overlay"
           />
-          <h1 className="text-4xl capitalize text-white font-bold pt-56 text-center">
+        </div>
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
+          <h1 className="text-4xl capitalize text-white font-bold text-center">
             Meet the team
           </h1>
         </div>

@@ -17,6 +17,33 @@ import Donate from "../components/Donate";
 import Map from "../components/Map";
 
 export const Home = () => {
+  // What We Do Section Data
+  const whatWeDoData = [
+    {
+      icon: <FaBasketballBall />,
+      title: "Basketball Coaching",
+      description:
+        "We reach out to underprivileged and street teenagers without access to sports facilities and give them the opportunity to compete globally and become evolved youngsters by teaching them basketball and coaching them to become champions at the sport.",
+    },
+    {
+      icon: <SiHyperskill />,
+      title: "Life Skills",
+      description:
+        "Basketball equips the teens with basic life skills like team work, resilience, and people skills. Beyond the court, our program provides access to workshops and resources that promote mental and physical well-being in children. Teens learn about healthy habits, stress management techniques.",
+    },
+    {
+      icon: <MdOutlineFollowTheSigns />,
+      title: "Leadership",
+      description:
+        "We aim to cultivate the African leaders of tomorrow. We identify and nurture leadership potential within our students. Teens participate in workshops that build decision-making skills, positive influence, and the courage to stand up for what is right. They learn to be role models for their peers, leading their communities towards a brighter future.",
+    },
+    {
+      icon: <FaPeopleRoof />,
+      title: "Community Thinking",
+      description:
+        "Basketball is not just a game — it is a unifier. Our program fosters a sense of belonging and social responsibility in teens by organizing tournaments, clean-up projects, and mentorship initiatives. Teens work together to improve their court, their neighborhood, and themselves. They learn the power of collaboration, the importance of giving back, and the joy of building a stronger community.",
+    },
+  ];
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -28,13 +55,13 @@ export const Home = () => {
       <header className="" data-aos="fade-up">
         <section>
           <div
-            className="h-[50vh] md:h-screen bg-cover bg-center w-full relative rounded "
+            className="h-[50vh] lg:h-screen md:h-[50vh] bg-cover bg-center w-full relative rounded "
             data-aos="fade-up"
           >
             <img
               src={HeaderBg}
               alt="Basketball4everyone Header Background"
-              className="w-full h-[60vh] md:h-full  object-cover"
+              className="w-full h-[60vh] lg:h-full  object-cover"
             />
           </div>
           <div className="absolute bg-black/50 inset-0 w-full h-full">
@@ -93,7 +120,7 @@ export const Home = () => {
       </header>
       <main>
         {/* Counter Stats */}
-        <section className="bg-yellow-500 md:mt-0" data-aos="fade-p">
+        <section className="bg-[#da7600] md:mt-0" data-aos="fade-p">
           <div id="stats" className="text-white py-16" data-aos="fade-p">
             <div className="mx-auto max-w-7xl px-6 lg:px-8" data-aos="fade-p">
               <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
@@ -185,7 +212,7 @@ export const Home = () => {
         </section>
 
         {/* What We Do Section */}
-        <section data-aos="fade-up py-10">
+        <section data-aos="fade-up" className="py-10">
           <div className="flex justify-center gap-1 items-center text-sm text-[#DA7600] pt-10">
             <MdOutlineRoundaboutRight className="text-[#da7600]" />
             About
@@ -194,99 +221,29 @@ export const Home = () => {
             What we do
           </h1>
           <div
-            className="grid md:grid-cols-2 gap-10 container mx-auto md:px-0 px-4"
+            className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto md:px-0 px-4"
             data-aos="fade-up"
           >
-            <div
-              className="text-center shadow-md rounded-md p-2"
-              data-aos="fade-up"
-            >
-              <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text">
-                <FaBasketballBall />
-              </div>
-              <h1
-                className="text-2xl font-bold pb-4 bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
-                data-aos="flip-left"
+            {whatWeDoData.map((item, idx) => (
+              <div
+                key={idx}
+                className="text-center shadow-md  hover:shadow-xl rounded-md p-4 bg-white hover:scale-105 transition-transform duration-300 ease-in-out"
+                data-aos="fade-up"
               >
-                Basketball Coaching
-              </h1>
-              <p>
-                We reach out to underprivileged and street teenagers without
-                access to sports facilities and give them the opportunity to
-                compete globally and become evolved youngsters by teaching them
-                basketball and coaching them to become champions at the sport.
-              </p>
-            </div>
-            <div
-              className="text-center shadow-md rounded-md p-2"
-              data-aos="fade-up"
-            >
-              <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text">
-                <SiHyperskill />
+                <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-[#da7600] bg-clip-text pb-4">
+                  {item.icon}
+                </div>
+                <h1
+                  className="text-2xl font-bold pb-4 bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
+                  data-aos="flip-left"
+                >
+                  {item.title}
+                </h1>
+                <p className="text-gray-500 pt-4">{item.description}</p>
               </div>
-              <h1
-                className="text-2xl pb-4 font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
-                data-aos="flip-left"
-              >
-                Life Skills
-              </h1>
-              <p>
-                Basketball equips the teens with basic life skills like team
-                work, resilience, and people skills. Beyond the court, our
-                program provides access to workshops and resources that promote
-                mental and physical well-being in children. Teens learn about
-                healthy habits, stress management techniques.
-              </p>
-            </div>
-            <div
-              className="text-center shadow-md rounded-md p-2"
-              data-aos="fade-up"
-            >
-              <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text">
-                <MdOutlineFollowTheSigns />
-              </div>
-              <h1
-                className="text-2xl font-bold pb-4 bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
-                data-aos="flip-left"
-              >
-                Leadership
-              </h1>
-              <p>
-                We aim to cultivate the African leaders of tomorrow. We identify
-                and nurture leadership potential within our students. Teens
-                participate in workshops that build decision-making skills,
-                positive influence, and the courage to stand up for what is
-                right. They learn to be role models for their peers, leading
-                their communities towards a brighter future.
-              </p>
-            </div>
-            <div
-              className="text-center shadow-md rounded-md p-2"
-              data-aos="fade-up"
-            >
-              <div className="text-4xl my-4 flex justify-center items-center font-bold bg-gradient-to-tr from-black to-yellow-500 bg-clip-text">
-                <FaPeopleRoof />
-              </div>
-              <h1
-                className="text-2xl font-bold pb-4 bg-gradient-to-tr from-black to-yellow-500 bg-clip-text text-transparent"
-                data-aos="flip-left"
-              >
-                Community Thinking
-              </h1>
-              <p>
-                Basketball is not just a game — it is a unifier. Our program
-                fosters a sense of belonging and social responsibility in teens
-                by organizing tournaments, clean-up projects, and mentorship
-                initiatives. Teens work together to improve their court, their
-                neighborhood, and themselves. They learn the power of
-                collaboration, the importance of giving back, and the joy of
-                building a stronger community.
-              </p>
-            </div>
+            ))}
           </div>
         </section>
-
-        {/* Join Us Section */}
         <section className="bg-gray-50 py-10">
           <JoinUs />
         </section>
