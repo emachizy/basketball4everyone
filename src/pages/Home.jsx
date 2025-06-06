@@ -28,16 +28,18 @@ export const Home = () => {
       <header className="" data-aos="fade-up">
         <section>
           <div
-            className="bg-gradient-to-tr from-gray-500 to-gray-950 md:h-scren bg-cover bg-center w-full relative rounded"
+            className="md:h-screen h-[80vh] bg-cover bg-center w-full relative rounded "
             data-aos="fade-up"
           >
             <img
               src={HeaderBg}
               alt="Basketball4everyone Header Background"
-              className="w-full h-screen object-cover absolute mix-blend-overlay"
+              className="w-full h-full object-cover absolute mix-blend-overlay"
             />
+          </div>
+          <div className="absolute bg-black/20 inset-0 w-full h-full">
             <div
-              className="container mx-auto text-white text-center pt-8 md:px-0 px-4"
+              className="max-w-3xl container mx-auto text-white text-center pt-8 md:px-0 px-4"
               data-aos="fade-up"
             >
               <h1
@@ -81,9 +83,9 @@ export const Home = () => {
                 </Link>
               </div>
               <div>
-                <Link to="/volunteer">
+                {/* <Link to="/volunteer">
                   <BecomeAVolunteer />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
